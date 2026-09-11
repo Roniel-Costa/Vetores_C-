@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Parte 1 (até aqui foi tranquilo)
+   
+    int A[8], X, Y, soma;
+   
+    for( int i = 0; i < 8; i++){
+        cout << "Digite um valor inteiro: " << endl;
+        cin >> A[i];
+        }
+       
+    cout << "Digite um valor de 0 a 7" << endl;
+    cin >> X;
+   
+    cout << "Digite outro valor de 0 a 7" << endl;
+    cin >> Y;
+   
+    soma = A[X] + A[Y];
+   
+    cout << "A soma é " << soma << endl;
+       
+   
+    // Parte 2 (só de ler ja sei que vai ser complicado)
+
+    int B[10],maior, menor, posicaomaior, posicaomenor;
+    for( int i = 0; i < 10; i++){
+        cout << "Digite um valor inteiro" << endl;
+        cin >> B[i];
+       
+       
+        if ( i == 0) {
+            maior = B[0];
+            menor = B[0];
+            posicaomaior = 0;
+            posicaomenor = 0;
+        }
+       
+       
+        else {  
+            if (B[i] > maior){
+                maior = B[i];
+                posicaomaior = i;
+            }
+       
+            if (B[i] < menor){
+                    menor = B[i];
+                    posicaomenor = i;
+                }  
+           
+        }
+    }  
+   
+    cout << "\nO maior e: " << maior << " na posicao: " << posicaomaior << endl;
+    cout << "O menor e: " << menor << " na posicao: " << posicaomenor << endl;
+       
+    return 0;
+    }
